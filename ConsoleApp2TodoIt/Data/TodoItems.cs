@@ -51,5 +51,23 @@ namespace ConsoleApp2TodoIt.Data
         {
             todoitems = new Todo[0];
         }
+        //Task 10 a
+        public Todo[] FindByDoneStatus(bool doneStatus)
+        {
+            //here we take new size variable for a new Todo array
+            //in which the matching done status items will  be stored
+            int size = 0;
+            Todo[] ti = new Todo[0];
+            foreach (var t in todoitems)
+            {
+                if (t.Done == doneStatus)
+                {
+                    size = size + 1;
+                    Array.Resize<Todo>(ref ti, size);
+                    ti[size - 1] = t;
+                }
+            }
+            return ti;
+        }
     }
 }
