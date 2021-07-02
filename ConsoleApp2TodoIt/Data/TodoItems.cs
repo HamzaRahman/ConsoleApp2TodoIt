@@ -120,5 +120,29 @@ namespace ConsoleApp2TodoIt.Data
             }
             return ti;
         }
+        //Task 11 a2
+        public Todo[] RemoveTodo(int todoid)//11 a
+        {
+            int size = 0;
+            Todo[] TD = new Todo[0];
+            //Here we run a foreach loop on todoitems array
+            foreach (var p in todoitems)
+            {
+                //Then we compare our wanted ID with every Todo ID
+                if (p.todoID != todoid)
+                {
+                    //if its not found then it will be stored in TD array
+                    size = size + 1;
+                    Array.Resize<Todo>(ref TD, size);
+                    TD[size - 1] = p;
+                }
+            }
+            Clear();
+            Array.Resize<Todo>(ref todoitems, size);
+            //Now we copy TD array to todoitems array
+            Array.Copy(TD, todoitems, size);
+            //returning TD array
+            return TD;
+        }
     }
 }
