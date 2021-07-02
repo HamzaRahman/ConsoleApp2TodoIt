@@ -138,10 +138,10 @@ namespace ConsoleApp2TodoIt.UnitTests
         {
             bool actualresult = false;
             //Here we add 2 todo items first in the todoitems Array
-            p.AddTodo("DDD", true, null);
-            p.AddTodo("DDD", true, null);
+            todoItems.AddTodo("DDD", true, null);
+            todoItems.AddTodo("DDD", true, null);
             //Then we remove our wanted todo by its ID
-            Todo[] t = p.RemoveTodo(1);
+            Todo[] t = todoItems.RemoveTodo(1);
             foreach (var c in t)
             {
                 //Now we verify/test if the returned array have all and only todoitems of ID except 1, meaning  1 is removed or not.
