@@ -40,5 +40,16 @@ namespace ConsoleApp2TodoIt.Data
             //else the 0 ID person we created will be returned
             return person;
         }
+        //Task 8 e
+        public Person AddPerson(string Fname, string Lname)
+        {
+            int size = Size();
+            size = size + 1;
+            Array.Resize(ref peoples, size);
+            int ID = PersonSequencer.nextPersonid();
+            Person person = new Person(ID, Fname, Lname);
+            peoples[size - 1] = person;
+            return person;
+        }
     }
 }
