@@ -16,8 +16,9 @@ namespace ConsoleApp2TodoIt.Model
         {
             //Initializing/creating object.
             this.personId = pID;
-            this.firstName = firstName;
-            this.lastName = lastName;
+            //In here you will have to do this after Task 3c
+            this.FirstName = firstName;
+            this.LastName = lastName;
         }
         public int PersonID
         {

@@ -12,8 +12,8 @@ namespace ConsoleApp2TodoIt.UnitTests
         [InlineData(1, "Commit Changes")]
         public void NormalTest(int todoid, string description)
         {
-            Todo t1 = new Todo(todoid, description);
-            Assert.Equal("Commit Changes", t1.Description);
+            Todo todo = new Todo(todoid, description);
+            Assert.Equal("Commit Changes", todo.Description);
         }
     }
 }

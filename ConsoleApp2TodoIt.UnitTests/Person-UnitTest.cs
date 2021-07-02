@@ -17,7 +17,7 @@ namespace ConsoleApp2TodoIt.UnitTests
         {
             try
             {
-                Person p1 = new Person(ID, Fname, Lname);
+                Person person = new Person(ID, Fname, Lname);
             }
             catch (ArgumentException ex)
             {
@@ -29,9 +29,9 @@ namespace ConsoleApp2TodoIt.UnitTests
         [InlineData(1, "Magnus", "Ivarsson")]
         public void NormalTest(int ID, string Fname, string Lname)
         {
-            Person p1 = new Person(ID, Fname, Lname);
-            Assert.Equal("Magnus", p1.FirstName);
-            Assert.Equal("Ivarsson", p1.LastName);
+            Person person = new Person(ID, Fname, Lname);
+            Assert.Equal("Magnus", person.FirstName);
+            Assert.Equal("Ivarsson", person.LastName);
         }
     }
 }
