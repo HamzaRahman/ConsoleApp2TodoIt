@@ -13,5 +13,10 @@ namespace ConsoleApp2TodoIt.Data
         {
             return TodoId = TodoId + 1;
         }
+        //Task 7 c.
+        public static void reset()
+        {
+            TodoId = 0;
+        }
     }
 }
