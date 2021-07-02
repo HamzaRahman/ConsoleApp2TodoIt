@@ -19,5 +19,19 @@ namespace ConsoleApp2TodoIt.Data
         {
             return todoitems;
         }
+        //Task 9 d
+        public Todo FindByID(int todoid)
+        {
+            Todo todo = new Todo(0, "MM");
+            foreach (var p in todoitems)
+            {
+                if (p.todoID == todoid)
+                {
+                    return p;
+                }
+
+            }
+            return todo;
+        }
     }
 }
