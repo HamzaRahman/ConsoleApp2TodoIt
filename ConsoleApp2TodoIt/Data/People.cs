@@ -9,5 +9,10 @@ namespace ConsoleApp2TodoIt.Data
     {
         //Task 8 a
         static Person[] peoples = new Person[0];
+        //Task 8 b
+        public int Size()
+        {
+            return peoples.Length;
+        }
     }
 }
