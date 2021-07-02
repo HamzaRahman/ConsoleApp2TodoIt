@@ -14,5 +14,10 @@ namespace ConsoleApp2TodoIt.Data
         {
             return peoples.Length;
         }
+        //Task 8 c
+        public Person[] FindAll()
+        {
+            return peoples;
+        }
     }
 }
