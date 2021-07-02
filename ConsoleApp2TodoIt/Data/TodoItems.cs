@@ -69,5 +69,21 @@ namespace ConsoleApp2TodoIt.Data
             }
             return ti;
         }
+        //Task 10 b
+        public Todo[] FindByAssignee(int personid)
+        {
+            int size = 0;
+            Todo[] ti = new Todo[0];
+            foreach (var t in todoitems)
+            {
+                if (t.Assignee.PersonID == personid)
+                {
+                    size = size + 1;
+                    Array.Resize<Todo>(ref ti, size);
+                    ti[size - 1] = t;
+                }
+            }
+            return ti;
+        }
     }
 }
