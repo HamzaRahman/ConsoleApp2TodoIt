@@ -56,5 +56,29 @@ namespace ConsoleApp2TodoIt.Data
         {
             peoples = new Person[0];
         }
+        //Task 11 a
+        public Person[] RemovePerson(int personid)
+        {
+            int size = 0;
+            Person[] pps = new Person[0];
+            //Here we run a foreach loop on peoples array
+            foreach (var p in peoples)
+            {
+                //Then we compare our wanted ID with every persons ID
+                if (p.PersonID != personid)
+                {
+                    //if its not found then it will be stored in pps array
+                    size = size + 1;
+                    Array.Resize<Person>(ref pps, size);
+                    pps[size - 1] = p;
+                }
+            }
+            Clear();
+            Array.Resize<Person>(ref peoples, size);
+            //Now we copy pps array to peoples array
+            Array.Copy(pps, peoples, size);
+            //returning pps array
+            return pps;
+        }
     }
 }
