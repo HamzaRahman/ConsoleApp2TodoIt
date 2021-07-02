@@ -14,5 +14,10 @@ namespace ConsoleApp2TodoIt.Data
         {
             return todoitems.Length;
         }
+        //Task 9 c
+        public Todo[] FindAll()
+        {
+            return todoitems;
+        }
     }
 }
