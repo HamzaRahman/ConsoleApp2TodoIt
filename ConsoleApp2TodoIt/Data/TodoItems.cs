@@ -103,5 +103,22 @@ namespace ConsoleApp2TodoIt.Data
             }
             return ti;
         }
+        //Task 10 d
+        public Todo[] FindUnassignedTodoItems()
+        {
+            int size = 0;
+            Todo[] ti = new Todo[0];
+            foreach (var t in todoitems)
+            {
+                //To check if this person is same as we want, we compare its ID, FirstName and LastName
+                if (t.Assignee == null)
+                {
+                    size = size + 1;
+                    Array.Resize<Todo>(ref ti, size);
+                    ti[size - 1] = t;
+                }
+            }
+            return ti;
+        }
     }
 }
