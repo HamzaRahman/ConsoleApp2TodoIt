@@ -33,5 +33,18 @@ namespace ConsoleApp2TodoIt.Data
             }
             return todo;
         }
+        //Task 9 e
+        public Todo AddTodo(string Desc, bool status, Person pi)
+        {
+            int size = Size();
+            size = size + 1;
+            Array.Resize<Todo>(ref todoitems, size);
+            int ID = TodoSequencer.nextTodoid();
+            Todo p = new Todo(ID, Desc);
+            p.Done = status;
+            p.Assignee = pi;
+            todoitems[size - 1] = p;
+            return p;
+        }
     }
 }
