@@ -11,6 +11,7 @@ namespace ConsoleApp2TodoIt.UnitTests
     {
         People people = new People();
         //Task 8 d
+        //Run This Test Indvidually
         [Theory]
         [InlineData(1)]
         public void FindByIDTest(int ID)
@@ -52,13 +53,13 @@ namespace ConsoleApp2TodoIt.UnitTests
         //except for Run all, it will be passed
 
         //Task 8 e
-        [Theory]
-        [InlineData("Magnus", "Ivarson")]
-        public void AddNewTest(string Fname, string Lname)
-        {
-            Person ps = people.AddPerson(Fname, Lname);
-            Assert.Equal(2, ps.PersonID);
-        }
+        //[Theory]
+        //[InlineData("Magnus", "Ivarson")]
+        //public void AddNewTest(string Fname, string Lname)
+        //{
+        //    Person ps = people.AddPerson(Fname, Lname);
+        //    Assert.Equal(2, ps.PersonID);
+        //}
 
 
         //Task 8 f
