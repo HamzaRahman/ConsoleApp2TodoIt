@@ -4,7 +4,8 @@ using System.Text;
 
 namespace ConsoleApp2TodoIt.Model
 {
-    class Person
+    //Public 
+    public class Person
     {
         //Task 3a
         readonly int personId;
