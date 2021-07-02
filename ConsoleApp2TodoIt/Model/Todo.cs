@@ -11,5 +11,11 @@ namespace ConsoleApp2TodoIt.Model
         string description;
         bool done;
         Person assignee;
+        //Task 4 b
+        public Todo(int todoid, string description)
+        {
+            this.todoid = todoid;
+            this.description = description;
+        }
     }
 }
