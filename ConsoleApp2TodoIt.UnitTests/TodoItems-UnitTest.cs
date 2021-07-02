@@ -132,5 +132,30 @@ namespace ConsoleApp2TodoIt.UnitTests
             }
             Assert.True(actualresult);
         }
+        //Task 11 b2
+        [Fact]
+        public void RemoveTodoTest()//11 b
+        {
+            bool actualresult = false;
+            //Here we add 2 todo items first in the todoitems Array
+            p.AddTodo("DDD", true, null);
+            p.AddTodo("DDD", true, null);
+            //Then we remove our wanted todo by its ID
+            Todo[] t = p.RemoveTodo(1);
+            foreach (var c in t)
+            {
+                //Now we verify/test if the returned array have all and only todoitems of ID except 1, meaning  1 is removed or not.
+                if (c.todoID == 1)
+                {
+                    actualresult = false;
+                    break;
+                }
+                else
+                {
+                    actualresult = true;
+                }
+            }
+            Assert.True(actualresult);
+        }
     }
 }
