@@ -51,5 +51,10 @@ namespace ConsoleApp2TodoIt.Data
             peoples[size - 1] = person;
             return person;
         }
+        //Task 8 f
+        public void Clear()
+        {
+            peoples = new Person[0];
+        }
     }
 }
