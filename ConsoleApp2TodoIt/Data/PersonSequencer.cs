@@ -13,5 +13,10 @@ namespace ConsoleApp2TodoIt.Data
         {
             return personId = personId + 1;
         }
+        //Task 6 c
+        public static void reset()
+        {
+            personId = 0;
+        }
     }
 }
