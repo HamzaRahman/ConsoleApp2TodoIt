@@ -46,5 +46,10 @@ namespace ConsoleApp2TodoIt.Data
             todoitems[size - 1] = p;
             return p;
         }
+        //Task 9 f
+        public void Clear()
+        {
+            todoitems = new Todo[0];
+        }
     }
 }
