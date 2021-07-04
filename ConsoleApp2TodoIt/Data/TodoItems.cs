@@ -25,7 +25,7 @@ namespace ConsoleApp2TodoIt.Data
             Todo todo = new Todo(0, "MM");
             foreach (var p in todoitems)
             {
-                if (p.todoID == todoid)
+                if (p.TodoID == todoid)
                 {
                     return p;
                 }
@@ -129,7 +129,7 @@ namespace ConsoleApp2TodoIt.Data
             foreach (var p in todoitems)
             {
                 //Then we compare our wanted ID with every Todo ID
-                if (p.todoID != todoid)
+                if (p.TodoID != todoid)
                 {
                     //if its not found then it will be stored in TD array
                     size = size + 1;

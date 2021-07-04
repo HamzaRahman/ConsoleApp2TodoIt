@@ -16,6 +16,8 @@ namespace ConsoleApp2TodoIt.UnitTests
         [InlineData(1)]
         public void FindByIDTest(int ID)
         {
+            people.Clear();
+            PersonSequencer.reset();
             people.AddPerson("MM", "ff");
             Person ps = people.FindByID(ID);
             Assert.Equal(1, ps.PersonID);

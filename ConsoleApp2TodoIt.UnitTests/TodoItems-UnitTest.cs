@@ -31,21 +31,25 @@ namespace ConsoleApp2TodoIt.UnitTests
         [InlineData(1)]
         public void FindByIDTest(int ID)
         {
+            todoItems.Clear();
+            TodoSequencer.reset();
             Person pr = new Person(1, "dd", "ee");
             //To test find by ID, we first store a todo item
             todoItems.AddTodo("mm", true, pr);
             //Then we test to find it by giving its ID
             Todo ps = todoItems.FindByID(ID);
-            Assert.Equal(1, ps.todoID);
+            Assert.Equal(1, ps.TodoID);
         }
         //Task 9 e
         [Theory]
         [InlineData("Todo 1")]
         public void AddTest(string Desc)
         {
+            todoItems.Clear();
+            TodoSequencer.reset();
             Person pr = new Person(1, "dd", "ee");
             Todo ps = todoItems.AddTodo(Desc, true, pr);
-            Assert.Equal(1, ps.todoID);
+            Assert.Equal(1, ps.TodoID);
         }
         //Task 10 a
         [Theory]
@@ -73,6 +77,8 @@ namespace ConsoleApp2TodoIt.UnitTests
         [InlineData(1)]
         public void FindByAssignee(int ID)
         {
+            todoItems.Clear();
+            TodoSequencer.reset();
             bool actualresult = false;
             Person pr = new Person(1, "dd", "ee");
             todoItems.AddTodo("DDD", true, pr);
@@ -95,6 +101,8 @@ namespace ConsoleApp2TodoIt.UnitTests
         [Fact]
         public void FindByAssigneeTest()
         {
+            todoItems.Clear();
+            TodoSequencer.reset();
             bool actualresult = false;
             Person pr = new Person(1, "dd", "ee");
             //Here we add a person first in the Todo array
@@ -145,7 +153,7 @@ namespace ConsoleApp2TodoIt.UnitTests
             foreach (var c in t)
             {
                 //Now we verify/test if the returned array have all and only todoitems of ID except 1, meaning  1 is removed or not.
-                if (c.todoID == 1)
+                if (c.TodoID == 1)
                 {
                     actualresult = false;
                     break;

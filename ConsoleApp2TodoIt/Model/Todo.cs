@@ -18,7 +18,7 @@ namespace ConsoleApp2TodoIt.Model
             this.description = description;
         }
         //-----------------------------------
-        public int todoID
+        public int TodoID
         {
             get
             {
