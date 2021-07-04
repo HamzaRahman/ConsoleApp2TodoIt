@@ -11,6 +11,7 @@ namespace ConsoleApp2TodoIt.UnitTests
         [Fact]
         public void TodoIDTest()
         {
+            TodoSequencer.reset();
             int ID = TodoSequencer.nextTodoid();
             Assert.Equal(1, ID);
         }

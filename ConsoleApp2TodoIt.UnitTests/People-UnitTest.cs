@@ -43,6 +43,8 @@ namespace ConsoleApp2TodoIt.UnitTests
         [InlineData("Magnus", "Ivarson")]
         public void AddTest(string Fname, string Lname)
         {
+            people.Clear();
+            PersonSequencer.reset();
             Person ps = people.AddPerson(Fname, Lname);
             Assert.Equal(1, ps.PersonID);
 
