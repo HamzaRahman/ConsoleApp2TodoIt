@@ -26,17 +26,35 @@ namespace ConsoleApp2TodoIt.UnitTests
         [Fact]
         public void SizeTest()
         {
-            int i = 0;
+            people.Clear();
+            PersonSequencer.reset();
+            //Expected Value
+            int i = 1;
+            //Actual Value
+            people.AddPerson("MM", "ff");
             int size = people.Size();
+            //Type Test
             Assert.Equal(i.GetType(), size.GetType());
+            //Values Test
+            Assert.Equal(i, size);
         }
         //Task 8 c
         [Fact]
         public void FindAllTest()
         {
-            Person[] peoples = new Person[0];
+            people.Clear();
+            PersonSequencer.reset();
+            //Actual Values
+            people.AddPerson("MM", "ff");
             Person[] ps = people.FindAll();
+
+            //Expected Values/Variables ...peoples, p
+            Person[] peoples = new Person[0];
+            Person p = new Person(1, "MM", "ff");
+            //Type Test
             Assert.Equal(peoples.GetType(), ps.GetType());
+            //Values Test
+            Assert.Equal(p.PersonID, ps[0].PersonID);
         }
         //Task 8 e
         [Theory]

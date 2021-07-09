@@ -14,17 +14,34 @@ namespace ConsoleApp2TodoIt.UnitTests
         [Fact]
         public void SizeTest()
         {
-            int i = 0;
+            todoItems.Clear();
+            TodoSequencer.reset();
+            //Expected Value
+            int i = 1;
+            
+            //Actual Values
+            todoItems.AddTodo("", false, null);
             int ps = todoItems.Size();
+            //Type Test
             Assert.Equal(i.GetType(), ps.GetType());
+            //Value Test
+            Assert.Equal(i, ps);
         }
         //Task 9 c
         [Fact]
         public void FindAllTest()
         {
-            Todo[] peoples = new Todo[0];
+            todoItems.Clear();
+            TodoSequencer.reset();
+            //Actuall
+            todoItems.AddTodo(" ", false, null);
             Todo[] ps = todoItems.FindAll();
-            Assert.Equal(peoples.GetType(), ps.GetType());
+            //Expected
+            Todo t = new Todo(1, " ");
+            Todo[] todoitems = new Todo[0];
+            
+            Assert.Equal(todoitems.GetType(), ps.GetType());
+            Assert.Equal(t.TodoID, ps[0].TodoID);
         }
         //Task 9 d
         [Theory]

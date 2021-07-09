@@ -110,7 +110,6 @@ namespace ConsoleApp2TodoIt.Data
             Todo[] ti = new Todo[0];
             foreach (var t in todoitems)
             {
-                //To check if this person is same as we want, we compare its ID, FirstName and LastName
                 if (t.Assignee == null)
                 {
                     size = size + 1;
